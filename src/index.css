@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen bg-slate-900 text-white;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+}
+
+@layer utilities {
+  .movable-bounce {
+    animation: movable-bounce 1.1s ease-in-out infinite;
+  }
+
+  @keyframes movable-bounce {
+    0%,
+    100% {
+      transform: translateY(0px) scale(1);
+    }
+    50% {
+      transform: translateY(-3px) scale(1.06);
+    }
+  }
+}
